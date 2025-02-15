@@ -1,0 +1,12 @@
+{% block title %}Supprimer un cours{% endblock %}
+
+{% block body %}
+    <h1>Êtes-vous sûr de vouloir supprimer le cours : {{ course.titre }} ?</h1>
+
+    <form action="{{ path('course_delete', {'id': course.id}) }}" method="post">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ course.id) }}">
+        <button type="submit" class="btn btn-danger">Oui, supprimer</button>
+    </form>
+
+    <a href="{{ path('app_cours') }}" class="btn btn-secondary">Retour à la liste</a>
+{% endblock %}
