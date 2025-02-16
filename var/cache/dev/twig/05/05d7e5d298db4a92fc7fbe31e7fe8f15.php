@@ -89,7 +89,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                     <li class=\"has-dropdown\">
                                         <a class=\"nav-link\" href=\"#\">Pages</a>
                                         <ul class=\"submenu\">
-                                            <li><a href=\"about.html\">A propos de nous</a></li>
+                                            <li><a href=\"about.html\">About Us</a></li>
                                             <li><a href=\"team.html\">Team</a></li>
                                             <li><a href=\"team-details.html\">Team Details</a></li>
                                             <li><a href=\"event.html\">Event</a></li>
@@ -102,14 +102,8 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                     <li class=\"has-dropdown\">
                                         <a class=\"nav-link\" href=\"#\">Classes</a>
                                         <ul class=\"submenu\">
-                                            <li><a href=\"";
-        // line 67
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">Cours</a></li>
-                                            <li><a href=\"";
-        // line 68
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_detailscours");
-        yield "\">Détails des cours</a></li>
+                                            <li><a href=\"cours\">Courses</a></li>
+                                            <li><a href=\"course-details.html\">Course Details</a></li>
                                         </ul>
                                     </li>
                                     <li class=\"has-dropdown\">
@@ -220,7 +214,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                     <div class=\"col-lg-6\">
                         <div class=\"about-content\">
                             <div class=\"section-title-area\">
-                                <p class=\"pre-title\"><img src=\"assets/images/banner/title-img.svg\" alt=\"\">A propos de nous</p>
+                                <p class=\"pre-title\"><img src=\"assets/images/banner/title-img.svg\" alt=\"\">About Us</p>
                                 <h2 class=\"section-title\">Découvrez notre mission pour <br> Novalearn</h2>
                                 <p class=\"desc\">Bienvenue sur Novalearn, où l'éducation rencontre l'inspiration et où chaque parcours d'enfant est une histoire de croissance et de découverte.</p>
                             </div>
@@ -239,7 +233,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                     <div class=\"list-inner\">
                                         <div class=\"icon\"><img src=\"assets/images/icon/02.svg\" alt=\"\"></div>
                                         <div class=\"content\">
-                                            <h4 class=\"title\">Notre engagement</h4>
+                                            <h4 class=\"title\">Our Commitment</h4>
                                             <p class=\"desc\">As we embark on the journey of education <br>
                                                 together, we remain committed to providing.</p>
                                         </div>
@@ -389,10 +383,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                         <img src=\"assets/images/course/01.png\" alt=\"\">
                                     </div>
                                     <div class=\"content\">
-                                        <a href=\"";
-        // line 348
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_detailscours");
-        yield "\">
+                                        <a href=\"course-details.html\">
                                             <h4 class=\"title\">Early Explorers (Ages 3-5)</h4>
                                         </a>
                                         <p class=\"desc\">An introduction to colors, shapes, and basic artistic expressions.</p>
@@ -413,10 +404,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                         <img src=\"assets/images/course/02.png\" alt=\"\">
                                     </div>
                                     <div class=\"content\">
-                                        <a href=\"";
-        // line 369
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_detailscours");
-        yield "\">
+                                        <a href=\"course-details.html\">
                                             <h4 class=\"title\">Primary School (Ages 6-11)</h4>
                                         </a>
                                         <p class=\"desc\">An introduction to colors, shapes, and basic artistic expressions.</p>
@@ -437,10 +425,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                         <img src=\"assets/images/course/03.png\" alt=\"\">
                                     </div>
                                     <div class=\"content\">
-                                        <a href=\"";
-        // line 390
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_detailscours");
-        yield "\">
+                                        <a href=\"course-details.html\">
                                             <h4 class=\"title\">Middle School (Ages 12-14)</h4>
                                         </a>
                                         <p class=\"desc\">An introduction to colors, shapes, and basic artistic expressions.</p>
@@ -520,19 +505,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"";
-        // line 470
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/07.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"\"";
-        // line 476
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\"\">Languages</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Languages</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -542,19 +521,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper two\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"";
-        // line 486
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/08.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"";
-        // line 492
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">Coding</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Coding</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -564,19 +537,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper three\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"";
-        // line 502
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/09.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"";
-        // line 508
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">Math</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Math</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -586,19 +553,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper four\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"";
-        // line 518
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/10.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"";
-        // line 524
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">Music</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Music</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -608,19 +569,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper five\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"";
-        // line 534
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/11.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"";
-        // line 540
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">Writing</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Writing</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -1490,13 +1445,10 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             </div>
                             <div class=\"body\">
                                 <ul class=\"menu\">
-                                    <li><a href=\"";
-        // line 1410
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cours");
-        yield "\">Cours</a></li>
+                                    <li><a href=\"course.html\">Courses</a></li>
                                     <li><a href=\"blog.html\">Blog</a></li>
                                     <li><a href=\"program-details.html\">Program</a></li>
-                                    <li><a href=\"contact.html\">Contactez Nous</a></li>
+                                    <li><a href=\"contact.html\">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1686,32 +1638,32 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
     <div id=\"preloader\" class=\"preloader\">
         <div class=\"animation-preloader\">
             <div class=\"txt-loading\">
-                <span data-text-preloader=\"N\" class=\"letters-loading first\">
-                        N
+                <span data-text-preloader=\"S\" class=\"letters-loading first\">
+                        S
                     </span>
-                <span data-text-preloader=\"O\" class=\"letters-loading first\">
-                        O
+                <span data-text-preloader=\"T\" class=\"letters-loading first\">
+                        T
                     </span>
-                <span data-text-preloader=\"V\" class=\"letters-loading first\">
-                    V
+                <span data-text-preloader=\"U\" class=\"letters-loading first\">
+                    U
                     </span>
-                <span data-text-preloader=\"A\" class=\"letters-loading first\">
-                    A
+                <span data-text-preloader=\"D\" class=\"letters-loading first\">
+                    D
                     </span>
-                <span data-text-preloader=\"L\" class=\"letters-loading first\">
-                        L
+                <span data-text-preloader=\"Y\" class=\"letters-loading first\">
+                        Y
                     </span>
-                <span data-text-preloader=\"E\" class=\"letters-loading\">
-                        E
+                <span data-text-preloader=\"K\" class=\"letters-loading\">
+                        K
                     </span>
-                <span data-text-preloader=\"A\" class=\"letters-loading\">
-                        A
+                <span data-text-preloader=\"I\" class=\"letters-loading\">
+                        I
                     </span>
-                <span data-text-preloader=\"R\" class=\"letters-loading\">
-                    R
+                <span data-text-preloader=\"D\" class=\"letters-loading\">
+                    D
                     </span>
-                <span data-text-preloader=\"N\" class=\"letters-loading\">
-                    N
+                <span data-text-preloader=\"S\" class=\"letters-loading\">
+                    S
                     </span>
             </div>
             <p class=\"text-center\">Loading</p>
@@ -1875,7 +1827,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  1837 => 11,  1827 => 10,  1810 => 7,  1577 => 1489,  1495 => 1410,  622 => 540,  613 => 534,  600 => 524,  591 => 518,  578 => 508,  569 => 502,  556 => 492,  547 => 486,  534 => 476,  525 => 470,  442 => 390,  418 => 369,  394 => 348,  111 => 68,  107 => 67,  63 => 25,  61 => 10,  55 => 7,  47 => 1,);
+        return array (  1789 => 11,  1779 => 10,  1762 => 7,  1529 => 1489,  63 => 25,  61 => 10,  55 => 7,  47 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -1933,7 +1885,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                     <li class=\"has-dropdown\">
                                         <a class=\"nav-link\" href=\"#\">Pages</a>
                                         <ul class=\"submenu\">
-                                            <li><a href=\"about.html\">A propos de nous</a></li>
+                                            <li><a href=\"about.html\">About Us</a></li>
                                             <li><a href=\"team.html\">Team</a></li>
                                             <li><a href=\"team-details.html\">Team Details</a></li>
                                             <li><a href=\"event.html\">Event</a></li>
@@ -1946,8 +1898,8 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                     <li class=\"has-dropdown\">
                                         <a class=\"nav-link\" href=\"#\">Classes</a>
                                         <ul class=\"submenu\">
-                                            <li><a href=\"{{ path('app_cours') }}\">Cours</a></li>
-                                            <li><a href=\"{{ path('app_detailscours') }}\">Détails des cours</a></li>
+                                            <li><a href=\"cours\">Courses</a></li>
+                                            <li><a href=\"course-details.html\">Course Details</a></li>
                                         </ul>
                                     </li>
                                     <li class=\"has-dropdown\">
@@ -2058,7 +2010,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                     <div class=\"col-lg-6\">
                         <div class=\"about-content\">
                             <div class=\"section-title-area\">
-                                <p class=\"pre-title\"><img src=\"assets/images/banner/title-img.svg\" alt=\"\">A propos de nous</p>
+                                <p class=\"pre-title\"><img src=\"assets/images/banner/title-img.svg\" alt=\"\">About Us</p>
                                 <h2 class=\"section-title\">Découvrez notre mission pour <br> Novalearn</h2>
                                 <p class=\"desc\">Bienvenue sur Novalearn, où l'éducation rencontre l'inspiration et où chaque parcours d'enfant est une histoire de croissance et de découverte.</p>
                             </div>
@@ -2077,7 +2029,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                     <div class=\"list-inner\">
                                         <div class=\"icon\"><img src=\"assets/images/icon/02.svg\" alt=\"\"></div>
                                         <div class=\"content\">
-                                            <h4 class=\"title\">Notre engagement</h4>
+                                            <h4 class=\"title\">Our Commitment</h4>
                                             <p class=\"desc\">As we embark on the journey of education <br>
                                                 together, we remain committed to providing.</p>
                                         </div>
@@ -2227,7 +2179,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                         <img src=\"assets/images/course/01.png\" alt=\"\">
                                     </div>
                                     <div class=\"content\">
-                                        <a href=\"{{path('app_detailscours')}}\">
+                                        <a href=\"course-details.html\">
                                             <h4 class=\"title\">Early Explorers (Ages 3-5)</h4>
                                         </a>
                                         <p class=\"desc\">An introduction to colors, shapes, and basic artistic expressions.</p>
@@ -2248,7 +2200,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                         <img src=\"assets/images/course/02.png\" alt=\"\">
                                     </div>
                                     <div class=\"content\">
-                                        <a href=\"{{path('app_detailscours')}}\">
+                                        <a href=\"course-details.html\">
                                             <h4 class=\"title\">Primary School (Ages 6-11)</h4>
                                         </a>
                                         <p class=\"desc\">An introduction to colors, shapes, and basic artistic expressions.</p>
@@ -2269,7 +2221,7 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                                         <img src=\"assets/images/course/03.png\" alt=\"\">
                                     </div>
                                     <div class=\"content\">
-                                        <a href=\"{{path('app_detailscours')}}\">
+                                        <a href=\"course-details.html\">
                                             <h4 class=\"title\">Middle School (Ages 12-14)</h4>
                                         </a>
                                         <p class=\"desc\">An introduction to colors, shapes, and basic artistic expressions.</p>
@@ -2349,13 +2301,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"{{ path('app_cours') }}\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/07.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"\"{{ path('app_cours') }}\"\">Languages</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Languages</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -2365,13 +2317,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper two\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"{{ path('app_cours') }}\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/08.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"{{ path('app_cours') }}\">Coding</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Coding</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -2381,13 +2333,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper three\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"{{ path('app_cours') }}\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/09.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"{{ path('app_cours') }}\">Math</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Math</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -2397,13 +2349,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper four\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"{{ path('app_cours') }}\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/10.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"{{ path('app_cours') }}\">Music</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Music</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -2413,13 +2365,13 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             <div class=\"category-wrapper five\">
                                 <div class=\"wrapper-inner\">
                                     <div class=\"icon\">
-                                        <a href=\"{{ path('app_cours') }}\">
+                                        <a href=\"course.html\">
                                             <img src=\"assets/images/icon/11.svg\" alt=\"\">
                                         </a>
                                     </div>
                                 </div>
                                 <div class=\"content\">
-                                    <h5 class=\"title\"><a href=\"{{ path('app_cours') }}\">Writing</a></h5>
+                                    <h5 class=\"title\"><a href=\"course.html\">Writing</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -3289,10 +3241,10 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
                             </div>
                             <div class=\"body\">
                                 <ul class=\"menu\">
-                                    <li><a href=\"{{ path('app_cours') }}\">Cours</a></li>
+                                    <li><a href=\"course.html\">Courses</a></li>
                                     <li><a href=\"blog.html\">Blog</a></li>
                                     <li><a href=\"program-details.html\">Program</a></li>
-                                    <li><a href=\"contact.html\">Contactez Nous</a></li>
+                                    <li><a href=\"contact.html\">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -3479,32 +3431,32 @@ class __TwigTemplate_49af80a7bb2e48aa639bc3c627ed07c2 extends Template
     <div id=\"preloader\" class=\"preloader\">
         <div class=\"animation-preloader\">
             <div class=\"txt-loading\">
-                <span data-text-preloader=\"N\" class=\"letters-loading first\">
-                        N
+                <span data-text-preloader=\"S\" class=\"letters-loading first\">
+                        S
                     </span>
-                <span data-text-preloader=\"O\" class=\"letters-loading first\">
-                        O
+                <span data-text-preloader=\"T\" class=\"letters-loading first\">
+                        T
                     </span>
-                <span data-text-preloader=\"V\" class=\"letters-loading first\">
-                    V
+                <span data-text-preloader=\"U\" class=\"letters-loading first\">
+                    U
                     </span>
-                <span data-text-preloader=\"A\" class=\"letters-loading first\">
-                    A
+                <span data-text-preloader=\"D\" class=\"letters-loading first\">
+                    D
                     </span>
-                <span data-text-preloader=\"L\" class=\"letters-loading first\">
-                        L
+                <span data-text-preloader=\"Y\" class=\"letters-loading first\">
+                        Y
                     </span>
-                <span data-text-preloader=\"E\" class=\"letters-loading\">
-                        E
+                <span data-text-preloader=\"K\" class=\"letters-loading\">
+                        K
                     </span>
-                <span data-text-preloader=\"A\" class=\"letters-loading\">
-                        A
+                <span data-text-preloader=\"I\" class=\"letters-loading\">
+                        I
                     </span>
-                <span data-text-preloader=\"R\" class=\"letters-loading\">
-                    R
+                <span data-text-preloader=\"D\" class=\"letters-loading\">
+                    D
                     </span>
-                <span data-text-preloader=\"N\" class=\"letters-loading\">
-                    N
+                <span data-text-preloader=\"S\" class=\"letters-loading\">
+                    S
                     </span>
             </div>
             <p class=\"text-center\">Loading</p>

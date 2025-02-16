@@ -101,9 +101,9 @@
                                     <a class="nav-link" href="#">Home</a>
 
                                     <ul class="submenu">
-                                        <li>
+                                
                            <a href="{{ path('app_home') }}">Home</a>
-                                        </li>
+                                        
                                         
                                     </ul>
                                 </li>
@@ -112,7 +112,15 @@
                                     <a class="nav-link" href="#">Classes</a>
                                     <ul class="submenu">
                                         <li><a href="{{path('app_cours')}}">Cours</a></li>
-                                        <li><a href="{{path('app_detailscoursphysique') }}">Détails des cours</a></li>
+                                                                          
+                                     {% for course in courses %}
+    <a href="{{ path('app_detailscours', { 'id': course.id }) }}">Voir les détails</a>
+{% endfor %}
+
+
+
+
+
                                     </ul>
                                 </li>
                                
@@ -174,6 +182,7 @@
                 <div class="col-lg-12">
                     <!-- filter top-area  -->
                     <div class="filter-small-top-full">
+                    
                     <a href="{{path('course_new')}}" class="btn btn-success">Ajouter un cours</a>
 
                     <div class="course-list">
@@ -211,841 +220,81 @@
                             <div class="row g-5 mt--30">
                                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
                                     <!-- rts single course -->
-                                    <div class="course-wrapper-style-2 inner">
-                                        <div class="wrapper-inner bg-one">
-                                            <div class="image">
-                                                <a href="{{ path('app_detailscours') }}"><img src="assets/images/course/04.jpg" alt=""></a>
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-one"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                               <a href="{{ path('app_detailscours')}}</a>
-                                                    <h5 class="title">Mathématiques</h5>
-                                                </a>
-                                                
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (124)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-01.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Maria Sofa</p>
-                                                    </div>
-                                                    <h5 class="price">$15.00</h5>
-                                                </div>
-                                              
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-style-2 inner">
-                                        <div class="wrapper-inner bg-four">
-                                            <div class="image">
-                                                <a href="{{path('app_detailscoursanglais')}}">
-                                                    <img src="assets/images/course/05.jpg" alt="">
-                                                </a>
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-four"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <a href="{{path('app_detailscoursanglais')}}">
-                                                    <h5 class="title">Anglais
-                                                         (Age 9-13)</h5>
-                                                </a>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (90)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-02.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Arya Stark</p>
-                                                    </div>
-                                                    <h5 class="price">$10.00</h5>
-                                                   
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-style-2 inner">
-                                        <div class="wrapper-inner bg-two">
-                                            <div class="image">
-                                                <a href="{{path('app_detailscoursarabe')}}">
-                                                    <img src="assets/images/course/06.jpg" alt="">
-                                                </a>
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-two"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <a href="{{path('app_detailscoursarabe')}}">
-                                                    <h5 class="title"> Arabe
-                                                        </h5>
-                                                </a>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (88)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-03.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Rosabell</p>
-                                                    </div>
-                                                    <h5 class="price">$16.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-style-2 inner">
-                                        <div class="wrapper-inner bg-three">
-                                            <div class="image">
-                                                <a href="{{path('app_detailscoursfrancais')}}">
-                                                    <img src="assets/images/course/07.jpg" alt="">
-                                                </a>
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-three"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <a href="{{path('app_detailscoursfrancais')}}">
-                                                    <h5 class="title">Français
-                                                        </h5>
-                                                </a>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-04.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Morgan Jofs</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-style-2 inner">
-                                        <div class="wrapper-inner bg-five">
-                                            <div class="image">
-                                                <a href="{{path('app_detailscoursscience')}}">
-                                                    <img src="assets/images/course/08.jpg" alt="">
-                                                </a>
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-five"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <a href="{{path('app_detailscoursscience')}}">
-                                                    <h5 class="title"> Sciences de la vie et de la terre</h5>
-                                                </a>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="public/assets/images/course/author-01.jpg" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Maria Sofa</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-style-2 inner">
-                                        <div class="wrapper-inner bg-eight">
-                                            <div class="image">
-                                                <a href="{{path('app_detailscourshistgeo')}}">
-                                                    <img src="assets/images/course/09.jpg" alt="">
-                                                </a>
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-eight"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 4-9</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <a href="{{path('app_detailscourshistgeo')}}">
-                                                    <h5 class="title">Histoire et Géographie
-                                                        3rd- 7th (One Time Class)</h5>
-                                                </a>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-02.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Arya Stark</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-style-2 inner">
-                                        <div class="wrapper-inner bg-six">
-                                            <div class="image">
-                                                <a href="{{path('app_detailscoursphysique')}}">
-                                                    <img src="assets/images/course/10.jpg" alt="">
-                                                </a>
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-six"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <a href="{{path('app_detailscoursphysique')}}">
-                                                    <h5 class="title">Physique
-                                                        </h5>
-                                                </a>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-03.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Rosabell</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-style-2 inner">
-                                        <div class="wrapper-inner bg-seven">
-                                            <div class="image">
-                                                <a href="{{path('app_detailscoursmusique')}}">
-                                                    <img src="assets/images/course/11.jpg" alt="">
-                                                </a>
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-seven"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 7-9</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <a href="{{path('app_detailscoursmusique')}}">
-                                                    <h5 class="title">Musique
-                                                        </h5>
-                                                </a>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-04.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Morgan Jofs</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="row g-5 mt--30">
-                                <div class="col-12" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-list-style inner">
-                                        <div class="wrapper-inner bg-one">
-                                            <div class="image">
-                                                <img src="assets/images/course/04.jpg" width="563" alt="">
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-one"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="title">Little Adventurers Travel the World Together! (Age 6-11)</h3>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (124)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-01.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Maria Sofa</p>
-                                                    </div>
-                                                    <h5 class="prix">$15.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-12" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-list-style inner">
-                                        <div class="wrapper-inner bg-four">
-                                            <div class="image">
-                                                <img src="assets/images/course/05.jpg" width="563" alt="">
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-four"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 6-11</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="title">Weekly English Language
-                                                    Arts Club (Age 9-13)</h3>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (90)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-02.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Arya Stark</p>
-                                                    </div>
-                                                    <h5 class="price">$10.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-12" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-list-style inner">
-                                        <div class="wrapper-inner bg-two">
-                                            <div class="image">
-                                                <img src="assets/images/course/06.jpg" width="563" alt="">
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-two"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="title">Dragon, Monster & Magical
-                                                    Creature Drawing Club</h3>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (88)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-03.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Rosabell</p>
-                                                    </div>
-                                                    <h5 class="price">$16.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-12" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-list-style inner">
-                                        <div class="wrapper-inner bg-three">
-                                            <div class="image">
-                                                <img src="assets/images/course/07.jpg" width="563" alt="">
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-three"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="title">Bloxburg 1 on 1 Class Learn
-                                                    to Build or Improve</h3>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-04.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Morgan Jofs</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-12" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-list-style inner">
-                                        <div class="wrapper-inner bg-five">
-                                            <div class="image">
-                                                <img src="public/assets/images/course/08.jpg" width="563" alt=""> 
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-five"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="title">Girls Just Want to Have Fun Art and Ongoing Social Club</h3>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-01.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Maria Sofa</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-12" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-list-style inner">
-                                        <div class="wrapper-inner bg-eight">
-                                            <div class="image">
-                                                <img src="assets/images/course/09.jpg" width="563" alt="">
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-eight"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 4-9</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="title">Histoire et Géographie 
-                                                    3rd- 7th (One Time Class)</h3>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-02.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Arya Stark</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-12" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-list-style inner">
-                                        <div class="wrapper-inner bg-six">
-                                            <div class="image">
-                                                <img src="assets/images/course/10.jpg" width="563" alt="">
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-six"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 3-8</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="title">A Full One on One Roblox
-                                                    Game Making Experience</h3>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-03.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Rosabell</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-
-                                <div class="col-12" data-category="transition">
-                                    <!-- rts single course -->
-                                    <div class="course-wrapper-list-style inner">
-                                        <div class="wrapper-inner bg-seven">
-                                            <div class="image">
-                                                <img src="assets/images/course/11.jpg" width="563" alt="">
-                                                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login"><i class="fa-regular fa-heart bg-seven"></i></div>
-                                            </div>
-                                            <div class="content">
-                                                <ul class="meta-wrapper">
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/12.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">Ages 7-9</p>
-                                                    </li>
-                                                    <li class="wrapper-list">
-                                                        <div class="icon">
-                                                            <img src="assets/images/icon/13.svg" alt="">
-                                                        </div>
-                                                        <p class="desc">50 Min</p>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="title">Learn To Read With Teacher
-                                                    Tracy - Individual Beginner</h3>
-                                                <div class="review-area">
-                                                    <ul class="star-rating-area">
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-regular fa-star"></i></li>
-                                                    </ul>
-                                                    <p class="desc">4.5 (44)</p>
-                                                </div>
-                                                <div class="bottom-wrapper">
-                                                    <div class="author-area">
-                                                        <div class="autor-image">
-                                                            <img src="assets/images/course/author-04.png" width="40" alt="">
-                                                        </div>
-                                                        <p class="author-name">Morgan Jofs</p>
-                                                    </div>
-                                                    <h5 class="price">$35.00</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- rts single course end -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                   {% for course in courses %}
+    <div class="course-wrapper-style-2 inner">
+        <div class="wrapper-inner bg-one">
+            <div class="image">
+                <a href="{{ path('app_detailscours', { 'id': course.id }) }}">
+                    <img src="assets/images/course/04.jpg" alt="">
+                </a>
+                <div class="wishlist save-icon" data-bs-toggle="modal" data-bs-target="#exampleModal-login">
+                    <i class="fa-regular fa-heart bg-one"></i>
                 </div>
             </div>
+            <div class="content">
+                <ul class="meta-wrapper">
+                    <li class="wrapper-list">
+                        <div class="icon">
+                            <img src="assets/images/icon/12.svg" alt="">
+                        </div>
+                        <p class="desc">Ages 3-8</p>
+                    </li>
+                    <li class="wrapper-list">
+                        <div class="icon">
+                            <img src="assets/images/icon/13.svg" alt="">
+                        </div>
+                        <p class="desc">50 Min</p>
+                    </li>
+                </ul>
+
+                <!-- Lien vers les détails du cours -->
+                <a href="{{ path('app_detailscours', { 'id': course.id }) }}">
+                    <h5 class="title">{{ course.titre }}</h5>
+                </a>
+
+                <div class="review-area">
+                    <ul class="star-rating-area">
+                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                        <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                    <p class="desc">4.5 (124)</p>
+                </div>
+                <div class="bottom-wrapper">
+                    <div class="author-area">
+                        <div class="autor-image">
+                            <img src="assets/images/course/author-01.png" width="40" alt="">
+                        </div>
+                        <p class="author-name">Maria Sofa</p>
+                    </div>
+                    <h5 class="price">$15.00</h5>
+                </div>
+
+                <!-- Boutons Modifier et Supprimer -->
+                <div class="course-actions">
+                    <a href="{{ path('course_edit', { 'id': course.id }) }}" class="btn btn-primary">Modifier</a>
+<form action="{{ path('course_delete', { 'id': course.id }) }}" method="post" style="display:inline;">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ course.id) }}">
+    <button type="submit" class="btn btn-danger" onclick="return confirm('Voulez-vous vraiment supprimer ce cours ?');">
+        Supprimer
+    </button>
+</form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+                                
+                               
+                                                
+                                                   
+                               
             <div class="row mt--30">
                 <div class="col-lg-12">
                     <!-- rts-pagination-area -->
@@ -1086,19 +335,7 @@
                 </form>
             </div>
             <div class="row ptb--65">
-             {% for course in courses %}
-        <div class="course-item">
-            <h5>{{ course.titre }}</h5>
-            <p>{{ course.description }}</p>
-
-            <a href="{{ path('course_edit', { 'id': course.id }) }}" class="btn btn-primary">Modifier</a>
-            <form action="{{ path('course_delete', { 'id': course.id }) }}" method="post" style="display:inline;">
-                <button type="submit" class="btn btn-danger">Supprimer</button>
-            </form>
-        </div>
-    {% else %}
-        <p>Aucun cours trouvé.</p>
-    {% endfor %} 
+        
                 <div class="col-lg-12">
                     <!-- footer main wrapper -->
                     <div class="footer-one-main-wrapper">
@@ -1265,11 +502,16 @@
                         <a href="#" class="main">Class</a>
                         <ul class="submenu mm-collapse">
                             <li><a class="mobile-menu-link" href="course.html">Cours</a></li>
-                            <li><a class="mobile-menu-link" href="{{path('app_detailscours')}}">Détails des cours</a></li>
+            {% for course in courses %}
+
+                            <li><a class="mobile-menu-link" href="{{ path('app_detailscours', { 'id': course.id }) }}">Détails des cours</a></li>
+                                        {% endfor %}
+
                         </ul>
                     </li>
                     
                     <li class="menu-item">
+
                         <a href="contact.html" class="main">Contact</a>
                     </li>
                 </ul>
